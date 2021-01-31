@@ -1,5 +1,5 @@
 .blog {
-    margin-top: 200px;
+    margin-top: 80px;
     margin-bottom: 65px;
     &-item{
         display: grid;
@@ -47,8 +47,7 @@
     }
     &__button {
         margin-top: 80px;
-        .btn {
-           
+        .btn {       
             font-size: 29px;
             font-weight: bold;
             font-stretch: normal;
@@ -59,8 +58,8 @@
             height: 75px;         
             padding: 26px 0 26px 0;
             background-color: $third-color;
-            color: #ffffff;
-            
+            color: #ffffff;    
+                  
         }
        
         .right-button {         

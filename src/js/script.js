@@ -67,16 +67,16 @@ window.addEventListener('DOMContentLoaded', () => {
         catalogBtn.classList.remove('active');
     };
 
-    function reNameBtn () {
-        document.getElementById('reNameBtn').innerHTML = 'Close tabs';
-        }
+    function reNameBtn() {
+        document.getElementById('reNameBtn').innerHTML = 'Close Tabs';
+    }
     function NameBtn() {
         document.getElementById('reNameBtn').innerHTML = 'Show More';
     }
 
 
     catalogBtn.addEventListener('click', () => {
-        if (catalogContent[1].style.display == 'none' ) {
+        if (catalogContent[1].style.display == 'none') {
             openCatalog();
             reNameBtn();
         } else {
@@ -87,7 +87,58 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // openCatalog();
     // closeCatalog();
-    
+
+
+    ///// Slider in motivation section
+
+
+    const slides = document.querySelectorAll('.motivation__slide'),
+        prev = document.querySelector('.motivation__slider-prev'),
+        next = document.querySelector('.motivation__slider-next'),
+        total = document.querySelector('#total'),
+        current = document.querySelector('#current');
+
+    let slideIndex = 1;
+
+    showSlides(slideIndex);
+
+    if (slides.length < 10) {
+        total.textContent = `0${slides.length}`;
+    } else {
+        total.textContent = slides.length;
+    }
+
+    function showSlides(n) {
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        slides.forEach(item => item.style.display = 'none');
+
+        slides[slideIndex - 1].style.display = 'block';
+
+        if (slides.length < 10) {
+            current.textContent = `0${slideIndex}`;
+        } else {
+            current.textContent = slideIndex;
+        }
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    prev.addEventListener('click', () => {
+        plusSlides(-1);
+    });
+
+    next.addEventListener('click', () => {
+        plusSlides(+1);
+    });
 
 
 

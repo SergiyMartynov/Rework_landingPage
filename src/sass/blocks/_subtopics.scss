@@ -1,16 +1,22 @@
 .subtopics {
     &__wrapper {
-        margin-top: 80px;
+        margin-top: 10px;
         margin-bottom: 250px;
         width: 100%;
-        // position: relative;
+        
     }
     .description {
-        // position: relative;
-        // z-index: 1;
         display: grid;
         grid-template-columns: repeat(3, 335px);
+        height: 240px;
         justify-content: space-around;
+        cursor: pointer;
+        span {
+            font-size: 22px;
+            color: $second-color;
+            // display: none;          
+        }
+
         &-item {
             .text-head {
               text-align: center;
@@ -21,10 +27,24 @@
             }
         }
     }
+
+    #subtopicsAddText1, #subtopicsAddText2, #subtopicsAddText3 {
+        span {
+            display: none;
+        }
+        :hover {
+            span {
+            display: inline-block;
+            }
+        }
+    }
+
+
     &__main {
-        margin-top: 180px;
+        margin-top: 20px;
         text-align: center;
     }
+
     &__main-descr {
         max-width: 800px;
         margin-top: 30px;
@@ -33,29 +53,28 @@
         align-items: center;
         text-align: center;
     }
+
     &__main-end {
-        margin-top: 40px;
+        margin-top: 20px;
         text-align: center;
         font-weight: bold;
         line-height: 1.57;     
     }
     
-
-
     &__img-alpha {
-
-        margin-top: -700px;
+        margin-top: -650px;
         right: 0px;
-        padding-left: 896px;
-       
+        padding-left: 896px;    
         img {
-
-            position: relative;
-            z-index: 2;
+            position: absolute;
+            z-index: -2;
             transform: scale(-1, 1);
-            // right: 0;
         }       
     }
+
+
+
+
 
 
 
