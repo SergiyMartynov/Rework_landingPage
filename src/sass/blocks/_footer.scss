@@ -1,0 +1,73 @@
+.footer {
+    position: relative;
+
+
+    &__wrapper {
+        width: 100%;  
+        background-color: $second-color;
+        padding-top: 80px ;
+        // position: relative;
+    }
+    // &__background {
+    //     object-fit: cover; 
+    //     width: 100%;     
+    //     z-index: 1; 
+    //     img {
+    //         width: 100%;   
+    //     }
+    // }
+    .description {
+        float: left;
+        // background-color:red;
+        display: block;
+        max-width: 460px;
+        margin-left: 96px;
+        margin-top: 150px;
+        color: #ffffff;
+        &-head {
+            font-family: Montserrat;
+            font-size: 30px;     
+        }
+        &-descr {
+            font-family: Montserrat;
+            font-size: 23.5px;
+        }
+    }
+    &__menu {
+        margin-top: 140px;
+        margin-left: 170px;
+        padding: 0 60px 0 140px;
+        display: flex;
+        justify-content: space-between;
+        // max-width: 500px;
+        &-item {
+            // padding-right: 80px;
+        }
+        ul {
+            // font-family: Montserrat;
+            // font-size: 25px;
+            // line-height: 1.6;
+            // color: #ffffff;
+            margin-top: 10px;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        li {
+            list-style-type: none;
+            max-width: 200px;
+        }
+        a {
+            font-family: Montserrat;
+            font-size: 25px;
+            line-height: 1.6;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+    }
+
+// 
+
+
+
+}
