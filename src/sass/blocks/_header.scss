@@ -70,26 +70,7 @@
             text-decoration: none;
             // transition: .4s;
         }
-        .line {
-            position: relative;
-            display: block;
-             a::before {
-                content: '';
-                bottom: 0;
-                left: 0;
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                background-color: #54524f;
-                opacity: 0.4;
-                transition: 0.3s;
-                transform: scaleX(0);
-            }
-            a:hover:before {
-                width: 100%;
-                transform: scaleX(1);
-            }
-        }              
+               
     }
     
 
