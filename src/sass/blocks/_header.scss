@@ -3,7 +3,7 @@
     min-height: 100vh;
     position: relative;
     background: url('../img/first_screen.jpg') center (center/cover) no-repeat;
-    animation: slide 20s infinite;
+    animation: slide 60s infinite;
    
 
 }
@@ -12,9 +12,13 @@
     justify-content: space-between;
     align-items: center;
     min-height: 128px;
-    // height: 130px;
-    padding: 34px 0 0 78px;
+    padding: 70px 0 0 0;
 
+    &__effectForSmallMedia {
+        display: none;
+    }
+
+ 
   
     &__logo {
         .wrapper {
@@ -23,28 +27,33 @@
             display: flex;
             justify-content: center; 
             align-items: center;
-            width: 104px;
-            height: 104px;
-            // background-color: rgb(255, 255, 255) ;
-            // box-shadow: 0 0 0 5px rgb(255, 255, 255) ;
-            border-radius: 50%;
-             &:hover {
-					cursor: pointer; 
-					animation:bounceOut 0.9s linear;
-				}
-        }
+            width: 100px;
+            height: 100px;
+            // background-color: rgb(255, 255, 255);
+            
+             
+        }         
     }
 
-        &_img {
-            // display: block;
-            position: absolute;
+    &__logo-img {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
             width: 94px;
             height: 94px;
-            padding-right: 10px;
-            margin: 40px;       
-        img{max-width: 100%;}
-
+            &:hover {
+                border-radius: 50%;
+				cursor: pointer; 
+				animation:bounceOut 0.9s linear;
+			}
+            img {
+                max-width: 100%;
+            
+            }   
         }
+
+
+        
 
     &__menu {
         .wrapper {
@@ -60,9 +69,9 @@
         width: 748px;  
         height: 12px; 
         list-style-type: none;
+    
         a {
             position: relative;
-            // display: inline-block;
             font-size: 25px;
             letter-spacing: 3.4px;
             color: #54524f;
@@ -79,6 +88,7 @@
             display: flex;
             justify-content: flex-end; 
             width: 400px;
+            margin-right: 40px;
         }
 
         .search-box {
@@ -149,6 +159,7 @@
             font-size: 25px;
             cursor: pointer;
             transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
         }
 
         .search-box .cancel-btn.active {
@@ -172,7 +183,15 @@
 }
 
 
+.hamburger { 
+    display: none;
+    }
+
+
+
 .main {
+      
+
     .title_head {
         width: 536px;
         height: 184px;
@@ -196,22 +215,12 @@
         color: #54524f
     }
     .btn-white {
-        // width: 218px;
-        // height: 47px;
-        // margin-top: 0;
         margin-left: 94px;
-        // padding-top: 6px;
-        // text-align: center;
-        // opacity: 0.9;
-        // border-radius: 20.4px;
-        // background-color: #ffffff;    
-        // font-size: 24px;
-        // font-weight: 800;
-        // color: #776c64;
         &:hover {
             color: #776c64;
         }
     }
+    
     .title_descr {
         width: 475px;
         height: 71px;
@@ -222,19 +231,52 @@
         letter-spacing: 1.03px;
         color: #54524f;
     }
+
+    
 }    
 
 // /slide background animation
 // @keyframes slide {
-//     0% {
-//         background-image: url('../img/first_screen.jpg');
+//     0%{
+//     background-image: url(../img/first_screen.jpg);
 //     }
-//     33% {
-//         background-image: url('../img/first_screen2.jpg');
+//     30%{
+//     background-image: url(../img/first_screen.jpg);
 //     }
-//     67% {
-//         background-image: url('../img/first_screen3.jpg');
+//     33%{
+//     background-image: url(../img/first_screen.jpg);
 //     }
+//     36%{
+//     background-image: url(../img/first_screen2.jpg);
+//     }
+//     39%{
+//     background-image: url(../img/first_screen2.jpg);
+//     }
+//     57%{
+//     background-image: url(../img/first_screen2.jpg);
+//     }
+//     60%{
+//     background-image: url(../img/first_screen2.jpg);
+//     }
+//     66%{
+//     background-image: url(../img/first_screen3.jpg);
+//     }
+//     69%{
+//     background-image: url(../img/first_screen3.jpg);
+//     }
+//     87%{
+//     background-image: url(../img/first_screen3.jpg);
+//     }
+//     92%{
+//     background-image: url(../img/first_screen3.jpg);
+//     } 
+//     95%{
+//     background-image: url(../img/first_screen.jpg);
+//     }
+//     100%{
+//     background-image: url(../img/first_screen.jpg);
+//     }
+ 
 // }
 
 //animation logo
