@@ -16,19 +16,20 @@
     
 }
 
-
+@import 'blocks/effects';
+@import 'blocks/button.scss';
 @import 'blocks/title.scss';
 @import 'blocks/header/header'; 
 @import 'blocks/catalog/catalog';
 @import 'blocks/blog/blog';
-@import 'blocks/main.scss';
-@import 'blocks/button.scss';
-@import 'blocks/motivation.scss';
+@import 'blocks/motivation/motivation';
 @import 'blocks/achievements.scss';
 @import 'blocks/subtopics.scss';
 @import 'blocks/footer.scss';
-@import 'blocks/effects';
+
 // @import 'blocks/media';
 @import 'blocks/header/mediaHeader';
 @import 'blocks/catalog/mediaCatalog';
-// @import 'blocks/blog/mediaBlog';
+@import 'blocks/blog/mediaBlog';
+@import 'blocks/motivation/mediaMotivation';
+
