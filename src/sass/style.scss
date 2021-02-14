@@ -10,6 +10,8 @@
     padding: 0;
 }
 
+
+
 .container {
     width: 1440px;
     margin: 0 auto;
@@ -24,13 +26,15 @@
 @import 'blocks/blog/blog';
 @import 'blocks/motivation/motivation';
 @import 'blocks/achievements/achievements';
-@import 'blocks/subtopics.scss';
-@import 'blocks/footer.scss';
+@import 'blocks/subtopics/subtopics';
+@import 'blocks/footer/footer';
 
-// @import 'blocks/media';
+// adaptive
 @import 'blocks/header/mediaHeader';
 @import 'blocks/catalog/mediaCatalog';
 @import 'blocks/blog/mediaBlog';
 @import 'blocks/motivation/mediaMotivation';
 @import 'blocks/achievements/mediaAchievements';
+@import 'blocks/subtopics/mediaSubtopics';
+@import 'blocks/footer/mediaFooter';
 
