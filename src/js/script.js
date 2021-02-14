@@ -182,51 +182,51 @@ window.addEventListener('DOMContentLoaded', () => {
         itemMenuFooter = document.querySelector('.footer__menu-item');
 
 
-    function hideArrowUl() {
+    // function hideArrowUl() {
 
-        arrow.forEach(item => {
-            item.style.display = 'none';
-        });
+    //     arrow.forEach(item => {
+    //         item.style.display = 'none';
+    //     });
 
-        footerUl.forEach(item => {
-            item.classList.remove('active');
-            item.style.display = 'none';
-        });
+    //     footerUl.forEach(item => {
+    //         item.classList.remove('active');
+    //         item.style.display = 'none';
+    //     });
 
-    }
+    // }
 
-    hideArrowUl();
-
-
-    function showArrowUl(i = 0) {
-        footerUl[i].classList.add('active');
-        footerUl[i].style.display = 'block';
-        arrow[i].style.display = 'block';
-    }
-
-    showArrowUl();
+    // hideArrowUl();
 
 
-    function closeArrowUl(i) {
-        footerUl[i].classList.remove('active');
-        footerUl[i].style.display = 'none';
-        arrow[i].style.display = 'none';
-    }
+    // function showArrowUl(i = 0) {
+    //     footerUl[i].classList.add('active');
+    //     footerUl[i].style.display = 'block';
+    //     arrow[i].style.display = 'block';
+    // }
 
-    closeArrowUl();
+    // showArrowUl();
 
 
-    itemMenuFooter.addEventListener('click', function (event) {
-        const target = event.target;
-        if (target && target.classList.contains('footer__ul')) {
-            footerUl.forEach((item, i) => {
-                if (target == item) {
-                    closeArrowUl();
-                    showArrowUl(i);
-                }
-            });
-        }
-    });
+    // function closeArrowUl(i) {
+    //     footerUl[i].classList.remove('active');
+    //     footerUl[i].style.display = 'none';
+    //     arrow[i].style.display = 'none';
+    // }
+
+    // closeArrowUl();
+
+
+    // itemMenuFooter.addEventListener('click', function (event) {
+    //     const target = event.target;
+    //     if (target && target.classList.contains('footer__ul')) {
+    //         footerUl.forEach((item, i) => {
+    //             if (target == item) {
+    //                 closeArrowUl();
+    //                 showArrowUl(i);
+    //             }
+    //         });
+    //     }
+    // });
 
 
 
