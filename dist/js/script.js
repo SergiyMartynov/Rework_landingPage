@@ -151,18 +151,29 @@ window.addEventListener('DOMContentLoaded', () => {
         overlay = document.querySelector('.overlay');
 
 
+    function bodyScroll() {
+        if (hamburger.classList.contains('hamburger_active')) {
+            console.log('one');
+            document.querySelector('body').style.overflow = 'hidden';
+        } else {
+            document.querySelector('body').style.overflow = 'scroll';
+            console.log('none');
+        }
 
+    }
+
+   
 
     hamburger.onclick = () => {
         hamburger.classList.toggle('hamburger_active');
         menu.classList.toggle('header_active');
         overlay.classList.toggle('overlay_active');
-        // document.body.classList.toggle('body-active');
-
-
-
-
+        bodyScroll();
     }
+
+
+
+
     //  footer adaptive nav  ////// not worked!!!
 
     let itemInfo = document.querySelectorAll('.item-info'),
@@ -170,55 +181,62 @@ window.addEventListener('DOMContentLoaded', () => {
         footerUl = document.querySelectorAll('.footer__ul'),
         itemMenuFooter = document.querySelector('.footer__menu-item');
 
-    // if (win.width() >= 768) {
 
-        // function hideArrowUl() {
+    function hideArrowUl() {
 
-        //     arrow.forEach(item => {
-        //         item.style.display = 'none';
-        //     });
+        arrow.forEach(item => {
+            item.style.display = 'none';
+        });
 
-        //     footerUl.forEach(item => {
-        //         item.classList.remove('active');
-        //         item.style.display = 'none';
-        //     });
+        footerUl.forEach(item => {
+            item.classList.remove('active');
+            item.style.display = 'none';
+        });
 
+    }
+
+    hideArrowUl();
+
+
+    function showArrowUl(i = 0) {
+        footerUl[i].classList.add('active');
+        footerUl[i].style.display = 'block';
+        arrow[i].style.display = 'block';
+    }
+
+    showArrowUl();
+
+
+    function closeArrowUl(i) {
+        footerUl[i].classList.remove('active');
+        footerUl[i].style.display = 'none';
+        arrow[i].style.display = 'none';
+    }
+
+    closeArrowUl();
+
+
+    itemMenuFooter.addEventListener('click', function (event) {
+        const target = event.target;
+        if (target && target.classList.contains('footer__ul')) {
+            footerUl.forEach((item, i) => {
+                if (target == item) {
+                    closeArrowUl();
+                    showArrowUl(i);
+                }
+            });
+        }
+    });
+
+
+
+
+     /////// function wrapper for screen  now work, 
+        // function adaptiveFooterNav() { 
+            // if (win.width() >= 768) {
+        //      }
         // }
-
-        // hideArrowUl();
-
-
-        // function showArrowUl(i = 0) {
-        //     footerUl[i].classList.add('active');
-        //     footerUl[i].style.display = 'block';
-        //     arrow[i].style.display = 'block';
-        // }
-
-        // showArrowUl();
-
-
-        // function closeArrowUl(i) {
-        //     footerUl[i].classList.remove('active');
-        //     footerUl[i].style.display = 'none';
-        //     arrow[i].style.display = 'none';
-        // }
-
-        // closeArrowUl();
-
-
-        // itemMenuFooter.addEventListener('click', function (event) {
-        //     const target = event.target;
-        //     if (target && target.classList.contains('footer__ul')) {
-        //         footerUl.forEach((item, i) => {
-        //             if (target == item) {
-        //                 closeArrowUl();
-        //                 showArrowUl(i);
-        //             }
-        //         });
-        //     }
-        // });
-
-    // }
+        // adaptiveFooterNav();
 
 
 
