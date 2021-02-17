@@ -1,3 +1,12 @@
+
+// window.addEventListener('DOMContentLoaded', function () {
+//     if (document.documentElement.clientWidth >= 768) {
+//         console.log('test');
+//     }
+// });
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
     ///For Search 
@@ -146,7 +155,6 @@ window.addEventListener('DOMContentLoaded', () => {
     ////// menu in small media 
 
     const menu = document.querySelector('.header'),
-        menuItem = document.querySelectorAll('.menu_item'),
         hamburger = document.querySelector('.hamburger'),
         overlay = document.querySelector('.overlay');
 
@@ -172,11 +180,9 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
 
+
+
    //////////  footer adaptive nav 
-
-
-
-
 
     const 
         arrow = document.querySelectorAll('.arrow'),
@@ -192,154 +198,78 @@ window.addEventListener('DOMContentLoaded', () => {
         arrowThird = document.getElementById("arrowThird");
 
 
-   // window.addEventListener () {
-    //        // if (win.width() >= 768) {
-    //     //      }
-    //     // }
+    // function footerAdaptiveNav () {
+        if (document.documentElement.clientWidth <= 768) {
+            function hideArrowUl() {
+                arrow.forEach(item => {
+                    item.style.display = 'none';
+                });
+                footerUl.forEach(item => {
+                    item.classList.remove('active');
+                    item.style.display = 'none';
+                });
+            }
+            hideArrowUl();
+
+
+            function showArrowUl(i = 0) {
+                footerUl[i].classList.add('active');
+                footerUl[i].style.display = 'block';
+                arrow[i].style.display = 'block';
+            }
+            showArrowUl();
+
+            function closeArrowUl(i = 0) {
+                footerUl[i].classList.remove('active');
+                footerUl[i].style.display = 'none';
+                arrow[i].style.display = 'none';
+            }
+           
+
+            footerItemFirst.onclick = () => {
+                closeArrowUl(0);
+                closeArrowUl(1);
+                closeArrowUl(2);
+                footerUlFirst.classList.add('active');
+                footerUlFirst.style.display = 'block';
+                arrowFirst.style.display = 'block';
+            }
+
+            footerItemSecond.onclick = () => {
+                closeArrowUl(0);
+                closeArrowUl(1);
+                closeArrowUl(2);
+                footerULSecond.classList.add('active');
+                footerULSecond.style.display = 'block';
+                arrowSecond.style.display = 'block';
+            }
+
+            footerItemThird.onclick = () => {
+                closeArrowUl(0);
+                closeArrowUl(1);
+                closeArrowUl(2);
+                footerUlThird.classList.add('active');
+                footerUlThird.style.display = 'block';
+                arrowThird.style.display = 'block';
+            }
+
+
+
+        }
     // }
 
-    // window.addEventListener('DOMContentLoaded', function () {
-    //     if (document.documentElement.clientWidth >= 768) {
-    //         console.log('test');
-    //     }
-
-    // });
 
 
+    // footerAdaptiveNav ();
 
-
-
-
-        // function adaptiveFooterNav() { 
-            // if (win.width() >= 768) {
-        //      }
-        // }
-        // adaptiveFooterNav();
-
-
-
-
-        function hideArrowUl() {
-            arrow.forEach(item => {
-                item.style.display = 'none';
-            });
-            footerUl.forEach(item => {
-                item.classList.remove('active');
-                item.style.display = 'none';
-            });
-        }
-        hideArrowUl();
-
-
-        function showArrowUl(i = 0) {
-            footerUl[i].classList.add('active');
-            footerUl[i].style.display = 'block';
-            arrow[i].style.display = 'block';
-        }
-        showArrowUl();
-
-
-        function closeArrowUl(i = 0) { 
-            footerUl[i].classList.remove('active');
-            footerUl[i].style.display = 'none';
-            arrow[i].style.display = 'none';       
-        }
-
-        footerItemFirst.onclick = () => { 
-            closeArrowUl(0);
-            closeArrowUl(1);
-            closeArrowUl(2);
-            footerUlFirst.classList.add('active');
-            footerUlFirst.style.display = 'block';
-            arrowFirst.style.display = 'block';
-        }
-
-        footerItemSecond.onclick = () => { 
-            closeArrowUl(0);
-            closeArrowUl(1);
-            closeArrowUl(2);
-            footerULSecond.classList.add('active');
-            footerULSecond.style.display = 'block';
-            arrowSecond.style.display = 'block';
-        }
-
-        footerItemThird.onclick = () => {
-            closeArrowUl(0);
-            closeArrowUl(1);
-            closeArrowUl(2);
-            footerUlThird.classList.add('active');
-            footerUlThird.style.display = 'block';
-            arrowThird.style.display = 'block';
-        }
-
-    
-
-
-
-
-   
-
-    
 
 
 
     
 
-
-    //  footer adaptive nav  ////// not worked!!!
-
-    // let itemInfo = document.querySelectorAll('.item-info'),
-    //     arrow = document.querySelectorAll('.arrow'),
-    //     footerUl = document.querySelectorAll('.footer__ul'),
-    //     itemMenuFooter = document.querySelector('.footer__menu-item');
-
-
-    // function hideArrowUl() {
-
-    //     arrow.forEach(item => {
-    //         item.style.display = 'none';
-    //     });
-
-    //     footerUl.forEach(item => {
-    //         item.classList.remove('active');
-    //         item.style.display = 'none';
-    //     });
-
-    // }
-
-    // hideArrowUl();
-
-
-    // function showArrowUl(i = 0) {
-    //     footerUl[i].classList.add('active');
-    //     footerUl[i].style.display = 'block';
-    //     arrow[i].style.display = 'block';
-    // }
-
-    // showArrowUl();
-
-
-    // function closeArrowUl(i) {
-    //     footerUl[i].classList.remove('active');
-    //     footerUl[i].style.display = 'none';
-    //     arrow[i].style.display = 'none';
-    // }
-
-    // closeArrowUl();
-
-
-    // itemMenuFooter.addEventListener('click', function (event) {
-    //     const target = event.target;
-    //     if (target && target.classList.contains('footer__ul')) {
-    //         footerUl.forEach((item, i) => {
-    //             if (target == item) {
-    //                 closeArrowUl();
-    //                 showArrowUl(i);
-    //             }
-    //         });
-    //     }
-    // });
-
+    
+    
+    
 
 
 });
